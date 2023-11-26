@@ -6,9 +6,9 @@ import * as dotenv from "dotenv";
 import connectDB from "./src/config/mongo.js";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
-import userRoutes from "../Backend/src/routes/userRoutes.js";
-import doctorsRoutes from "../Backend/src/routes/doctorsRoutes.js"
-import appointRoutes from "../Backend/src/routes/appointRoutes.js";
+import userRoutes from "./src/routes/userRoutes.js";
+import doctorsRoutes from "./src/routes/doctorsRoutes.js"
+import appointRoutes from "./src/routes/appointRoutes.js";
 //import paymentController from "../Backend/src/controllers/paymentController.js"
 
 dotenv.config();
@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "*",
   })
 );
 
